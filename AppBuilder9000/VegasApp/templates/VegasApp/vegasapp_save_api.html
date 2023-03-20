@@ -1,0 +1,25 @@
+{% extends "vegasapp_base.html" %}
+
+{% block content %}
+
+<h1>Saved API Weather</h1>
+<table>
+    <tr>
+        <th>Postal Code:</th>
+        <th>State:</th>
+        <th>City:</th>
+    </tr>
+    {% for n in news %}
+    <tr>
+        <td>{{ n.postal_code }}</td>
+        <td>{{ n.state }}</td>
+        <td>{{ n.city }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+
+{% endblock %}
+
+

@@ -1,0 +1,149 @@
+{% load static %}
+<!DOCTYPE html>
+<div id="wrapper">
+<html lang="en" class="bg_img">
+
+
+
+<!--HEAD-->
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Sin City Insider{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/vegasapp_layout.css' %}">
+</head>
+
+<body class="Background">
+
+
+<!--NAVBAR-->
+<div class="wrap">
+    <div class="navbar-container">
+        <ul class="navbar">
+            <a href="{% url 'vegasapp_home' %}"><li>Home</li></a>
+            <a href="{% url 'dining_page' %}"><li>Dining</li></a>
+            <a href="{% url 'attractions_page' %}"><li>Attractions</li></a>
+            <a href="{% url 'travel_page' %}"><li>Travel</li></a>
+            <a href="{% url 'createActivity' %}"><li>Share Your Activities</li></a>
+            <a href="{% url 'activity_page' %}"><li>Your Activities</li></a>
+            <a href="{% url 'vegasapp_api' %}"><li>API</li></a>
+        </ul>
+    </div>
+</div>
+<!--END NAV-->
+
+<!--BACKGROUND VIDEO
+<div class="video-section">
+
+    <div id="video-container">
+        <video autoplay muted loop id="Vegas_Video">
+            <source src="/static/images/vegas_video.mp4" type="video/mp4">
+        </video>
+    </div>
+
+</div>
+-->
+
+<!-- HEADER BACKGROUND IMAGE
+<div class="header-photo">
+    <div id="header-photo-container">
+        <img src="/static/images/vegasbackground2.jpg" id="header-img" class="header-photo-container">
+    </div>
+</div> -->
+
+<!--BODY-->
+
+
+<!--HOME SECTION/HEADER-->
+<div id="header-section">
+    <div class="header-container">
+        <div class="row text-center">
+
+            <span class="text-wrapper">
+                <span class="line line1"></span>
+                <span class="header-title">{% block header %} Sin City Insider{% endblock %}</span>
+                <span class="line line2"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION VIDEO BACKGROUND -->
+<div class="page-section">
+    <div id="video-container">
+        <video autoplay muted loop id="Vegas_Video">
+            <source src="/static/images/skyblack.mp4" type="video/mp4">
+        </video>
+    </div>
+
+{% block content %}
+
+{% endblock %}
+</div>
+
+<!--Our Goal Section -->
+<div id="our-goal">
+    <div class="container">
+        <div class="row">
+            <div class="overlay">
+                <div class="subheader-container">
+                    <div class="subheader-text">
+                        <h4>Our Goal For You</h4>
+                        <p>
+                            Whether you're from out of town,
+                            <br>Or you're a local just looking to venture out more,
+                            <br>We're here to guide you through the endless sites of Las Vegas!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--CONTACT SECTION-->
+<div id="Contact">
+    <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+           <div class="form-popup" id="myForm">
+                <form action="{% url 'createUser' %}" method="POST" class="userform">
+                    <div class="form-container">
+                    <label for="first_name"><b>First Name</b></label>
+                      <input type="text" placeholder="Type your name here" name="first_name" required>
+                    <label for="last_name"><b>Phone</b></label>
+                      <input type="text" placeholder="Type your phone number here" name="last_name">
+                    <label for="email"><b>Email</b></label>
+                      <input type="text" placeholder="Type your email address here" name="email" required>
+                    <label for="user_name"><b>User Name</b></label>
+                      <input type="text" placeholder="Type your desired username" name="user_name">
+
+                        {% csrf_token %}
+                        {{ form.non_field_errors }}
+                        {{ form.as_p }}
+                    </div>
+                    <div class="btnform-container">
+
+                        <button type="submit" input type="submit" class="btn">SUBMIT</button>
+                        <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+                    </div>
+
+
+                    </div>
+
+                </form>
+         </div>
+</div>
+
+
+<!--FOOTER-->
+<div id="footer">
+    <p class="center"><a href="#">Terms</a> | <a href="#">Privacy</a></p>
+    <p id="footer-text">&copy2022 - LV Insider </p>
+</div>
+<!-- END FOOTER -->
+
+
+<script src="/static/js/vegasapp_form.js"></script>
+</body>
+</html>
+</div>

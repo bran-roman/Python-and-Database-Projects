@@ -1,0 +1,25 @@
+{% extends "vegasapp_base.html" %}
+
+{% block title %}Top Things To Do In Las Vegas!{% endblock %}
+
+{% block header %}Delete Confirmation{% endblock %}
+
+{% block content %}
+
+
+    <form method="POST">
+        {% csrf_token %}
+        <h2>Confirm Delete</h2>
+        <p>Are you sure you would like to delete "{{ Activities.activity_name }}" from the database?</p>
+
+        {{ Activities.as_p }}
+
+        <button input type="submit" value="Yes, Delete it">Yes, Delete it</button>
+        <button type="submit"><a href="{% url 'activity_page' %}">Cancel</a></button>
+    </form>
+
+
+
+
+
+{% endblock %}

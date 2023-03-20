@@ -1,0 +1,24 @@
+{% extends "vegasapp_base.html" %}
+
+{% block title %}Top Things To Do In Las Vegas!{% endblock %}
+
+{% block header %}Top Things To Do In Las Vegas!{% endblock %}
+
+{% block content %}
+<h1>Update Activity</h1>
+<form name="activityForm" method="POST" action="">
+    <div class="formObject">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save Changes</button>
+    </div>
+</form>
+
+<div class="fromBtn_container">
+    <a href="{% url 'confirmDelete' entry.id %}"><button type="submit" class="btn">Delete</button></a>
+    <a href="{% url 'activity_details' entry.id %}"><button type="submit" class="btn">Return To Details</button></a>
+</div>
+
+
+
+{% endblock %}

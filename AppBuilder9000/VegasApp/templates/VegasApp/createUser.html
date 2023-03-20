@@ -1,0 +1,27 @@
+{% extends "vegasapp_base.html" %}
+
+{% block title %} Top Things To Do In Las Vegas {% endblock %}
+
+{% block header %}Create A New User:{% endblock %}
+
+{% block content %}
+<h1>Subscribe for updates!</h1>
+
+    <div class="admin_panel">
+        <form method="POST" action="{% url 'createUser' %}">
+            <div class="form-container">
+                {% csrf_token %}
+                {{ form.non_field_errors }}
+                {{ form.as_p }}
+            </div>
+            <div class="btnform-container">
+                <input type="submit" class="btn" value="Save New User" name="Save_item">
+                <a href="{% url 'vegasapp_home' %}"><button type="button" class="btn" value="Cancel">Cancel</button></a>
+            </div>
+        </form>
+    </div>
+
+
+
+
+{% endblock %}

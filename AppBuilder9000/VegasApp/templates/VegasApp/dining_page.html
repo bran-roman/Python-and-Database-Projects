@@ -1,0 +1,71 @@
+{% extends "vegasapp_base.html" %}
+
+{% block title %}Vegas Dining{% endblock %}
+
+{% block header %}Sin City Insider{% endblock %}
+
+{% block content %}
+<div class="page-section">
+    <div class="container">
+        <div class="row">
+            <!--DINING PAGE COLUMNS-->
+            <h1>Top Dining In Las Vegas</h1>
+                            <h3>Here you'll find dining options submitted by our community!
+                                <br>Click on their links to learn more about them</h3>
+                <div class="row-headers">
+
+                    <div class-="flex-container">
+                        <!--PHOTO CONTAINER 1-->
+                        <div class="photo-container">
+                            <div class="dining-col">
+                                <div class="photo">
+                                    <img src="/static/images/dining_thumbnail2.jpg" alt="XPot" class="hover-shadow cursor">
+                                    <div class="photo-overlay">
+                                        <h3>High-End Options</h3>
+                                            <p>
+                                                The best we have to offer!
+                                            </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- END PHOTO CONTAINER 1 -->
+
+                        <!-- PHOTO CONTAINER 2 -->
+                        <div class="photo-container">
+                            <div class="attract-col">
+                                <div class="photo">
+                                    <img src="/static/images/gordon2.jpg" alt="Area15" class="hover-shadow cursor">
+                                    <div class="photo-overlay">
+                                        <h3>Mid-Tier Options</h3>
+                                            <p>
+                                                Not too expensive, not too cheap
+                                            </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END PHOTO CONTAINER 2 -->
+
+                        <!-- PHOTO CONTAINER 3 -->
+                        <div class="photo-container">
+                            <div class="travel-col">
+                                <div class="photo">
+                                    <img src="/static/images/tacos.jpg" alt="Wynn" class="hover-shadow cursor">
+                                    <div class="photo-overlay">
+                                        <h3>Budget Options</h3>
+                                            <p>
+                                                No need to break the bank here!
+                                            </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--END PHOTO CONTAINER 3 -->
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,26 @@
+{% extends "vegasapp_base.html" %}
+
+{% block content %}
+<h1>Las Vegas News</h1>
+
+    <form method="get">
+        <div class="form-container">
+            <label></label>
+            {{ form.as_p }}
+        </div>
+        <div class="btnform-container">
+            <input type="text" name="state">
+            <button type="submit">Search On SeatGeek</button>
+        </div>
+
+    </form>
+    {% if events %}
+    <p><strong>{{ events.state }}</strong></p>
+    {% endif %}
+
+
+
+
+{% endblock %}
+
+

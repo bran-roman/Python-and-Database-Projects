@@ -1,0 +1,44 @@
+{% extends "vegasapp_base.html" %}
+
+{% block title %}Vegas Activities{% endblock %}
+
+{% block header %}Sin City Insider{% endblock %}
+
+{% block content %}
+<div class="page-section">
+    <div class="container">
+        <h1>View All Activities</h1>
+
+        <h3>Here you'll find activities submitted by our community.
+            <br>Click on their links to learn more about them</h3>
+        <div class="activity-page">
+
+            <div class="text-center">
+
+
+
+                <table>
+                    <tr>
+                        <th>Activity Name:</th>
+                        <th>Type of Activity:</th>
+                        <th>Budget:</th>
+                        <th>Description:</th>
+                    </tr>
+                    {% for e in entry %}
+                    <tr>
+                        <td><a href="{% url 'activity_details' e.id %}">{{ e.activity_name }}</a></td>
+                        <td>{{ e.activity_type }}</td>
+                        <td>{{ e.budget_type }}</td>
+                        <td>{{ e.description }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

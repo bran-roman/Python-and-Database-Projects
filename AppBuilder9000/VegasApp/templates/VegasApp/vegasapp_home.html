@@ -1,0 +1,74 @@
+{% extends "vegasapp_base.html" %}
+
+{% block title %}Las Vegas Insider{% endblock %}
+
+{% block content %}
+<div id="about" class="page-section">
+    <div class="container">
+        <div class="row">
+            <!-- HOME PAGE COLUMNS -->
+            <h1>What's Hot In Vegas?</h1>
+                <div class="row-headers">
+
+                    <div class-="flex-container">
+                        <!--PHOTO CONTAINER 1-->
+                        <div class="photo-container">
+                            <div class="dining-col">
+                                <div class="photo">
+                                   <img src="../static/images/dining_thumbnail2.jpg" alt="XPot" class="hover-shadow cursor">
+                                    <div class="photo-overlay">
+                                        <a href="{% url 'dining_page' %}"></a>
+                                        <h3>Dining</h3>
+                                            <p>
+
+                                            </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- END PHOTO CONTAINER 1 -->
+
+                        <!-- PHOTO CONTAINER 2 -->
+                        <div class="photo-container">
+                            <div class="attract-col">
+                                <div class="photo">
+                                    <img src="../static/images/attract_thumbnail2.jpg" alt="Area15" class="hover-shadow cursor">
+                                    <div class="photo-overlay">
+                                        <h3>Attractions</h3>
+                                            <p>
+
+                                            </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END PHOTO CONTAINER 2 -->
+
+                        <!-- PHOTO CONTAINER 3 -->
+                        <div class="photo-container">
+
+                            <div class="travel-col">
+                                <div class="photo">
+                                    <img src="../static/images/travel_thumbnail3.jpg" alt="Wynn" class="hover-shadow cursor">
+                                    <div class="photo-overlay">
+                                        <h3>Travel</h3>
+                                            <p>
+
+                                            </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--END PHOTO CONTAINER 3 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}

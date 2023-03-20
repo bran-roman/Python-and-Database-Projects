@@ -1,0 +1,19 @@
+{% extends "vegasapp_base.html" %}
+
+{% block title %}Top Things To Do In Las Vegas!{% endblock %}
+
+{% block header %}Top things to do in Vegas!{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h1>Activity Details</h1>
+    <h3>{{ entry.activity_name }}</h3>
+    <h3>{{ entry.activity_type }}</h3>
+    <h3>{{ entry.budget_type }}</h3>
+    <p>{{ entry.description }}</p>
+
+    <button><a href="{% url 'activity_edit' entry.id %}">Update Activity</a></button>
+</div>
+
+
+{% endblock %}
