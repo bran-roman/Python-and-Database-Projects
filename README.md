@@ -1,10 +1,10 @@
-Basic Python Projects
+Basic Python & Database Projects
 
-This repository contains Python related projects as part of the Prosper I.T. Consulting's Software Developer Internship.
+This repository contains Python-related and Database-related projects as part of Prosper I.T. Consulting's Software Developer Internship.
 
 Vegas Application (AppBuilder9000 -> VegasApp):
 
-This is a sample Web Application utilizing HTML, CSS, JavaScript, Python, and Django-related functions. This "VegasApp" application acts as a blog website where users can view and share activity recommendations for the city of Las Vegas. These activities are broken up into three sections, which include "Dining," "Attractions", and "Travel" areas. Users may view and subnmit their own activities under their respective tabs located in the navbar. Styling for these pages also include animations for the navbar, image headers, and contact button leading to a sign up form allowing users to stay updated on new recommendations.
+This is a sample Web Application utilizing HTML, CSS, JavaScript, Python, and Django-related functions. This "VegasApp" application acts as a blog website where users can view and share activity recommendations for the city of Las Vegas. These activities are broken up into three sections, which include "Dining," "Attractions", and "Travel" areas. Users may view and subnmit their own activities under their respective tabs located in the navbar. Styling for these pages also includes animations for the navbar, image headers, and contact button leading to a sign-up form allowing users to stay updated on new recommendations.
 
 Django Checkbook:
 
